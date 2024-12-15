@@ -50,14 +50,20 @@ public class Fighter {
     }
 
     public void fight(Fighter ennemy) {
-        System.out.println(this.name + " \uD83D\uDDE1\uFE0F " + ennemy.name);
+        System.out.println(this.name + " ATTACKS");
         int damage = (int) (Math.random() * this.strength + 1) - ennemy.dexterity;
         if (damage < 0) {
             damage = 0;
         }
-        System.out.println("damage" + damage);
+        System.out.println("damage " + damage);
         ennemy.life = ennemy.life - damage;
         System.out.println(ennemy.name + " 💙 " + ennemy.life + " life points");
 
     }
+    public boolean isAlive() {
+        return this.life >0;
+    }
 }
+
+
+
